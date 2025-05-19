@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Payment Method"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <RadioGroup
+        android:id="@+id/paymentMethodRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radioOnlinePayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Online Payment (Razorpay)"
+            android:checked="true"
+            android:padding="8dp" />
+
+        <RadioButton
+            android:id="@+id/radioCOD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cash on Delivery (COD)"
+            android:padding="8dp" />
+    </RadioGroup>
+</LinearLayout>

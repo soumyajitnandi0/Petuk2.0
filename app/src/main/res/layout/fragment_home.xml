@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9F9"
+    android:paddingBottom="50dp"
+    tools:context=".ui.home.HomeFragment">
+
+    <!-- Location Header with enhanced styling -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/header_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:id="@+id/tv_delivery_location_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Delivering to"
+                android:textSize="14sp"
+                android:alpha="0.7"
+                android:textColor="#757575"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_delivery_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="123 Main Street, Anytown"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:drawableEnd="@android:drawable/arrow_down_float"
+                android:drawableTint="#FF5722"
+                android:drawablePadding="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_delivery_location_label" />
+
+            <!-- Search Bar with improved styling -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/search_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#F5F5F5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_delivery_location">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="16dp">
+
+                    <ImageView
+                        android:id="@+id/search_icon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_search"
+                        app:tint="#FF5722"
+                        android:contentDescription="Search icon" />
+
+                    <androidx.appcompat.widget.SearchView
+                        android:id="@+id/searchView"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        app:iconifiedByDefault="false"
+                        app:queryBackground="@android:color/transparent"
+                        app:closeIcon="@drawable/ic_close"
+                        app:searchIcon="@null"
+                        app:submitBackground="@android:color/transparent"
+                        android:textCursorDrawable="@drawable/custom_cursor"
+                        app:queryHint="Search for restaurants or cuisines" />
+
+                    <ImageView
+                        android:id="@+id/filter_icon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_filter"
+                        app:tint="#757575"
+                        android:contentDescription="Filter options" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Enhanced Category Chips with better spacing and styling -->
+    <HorizontalScrollView
+        android:id="@+id/category_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:scrollbars="none"
+        android:paddingVertical="8dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@+id/header_container">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/category_chip_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:chipSpacing="8dp"
+            app:singleLine="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_all"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All"
+                android:textStyle="bold"
+                app:chipBackgroundColor="@color/category_button_background"
+                app:chipStrokeColor="#E0E0E0"
+                app:chipStrokeWidth="1dp"
+                android:checked="true" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_indian"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Indian"
+                app:chipBackgroundColor="@color/category_button_background"
+                app:chipStrokeColor="#E0E0E0"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_chinese"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipBackgroundColor="@color/category_button_background"
+                app:chipStrokeColor="#E0E0E0"
+                app:chipStrokeWidth="1dp"
+                android:text="Chinese" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_italian"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipBackgroundColor="@color/category_button_background"
+                app:chipStrokeColor="#E0E0E0"
+                app:chipStrokeWidth="1dp"
+                android:text="Italian" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_desserts"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipBackgroundColor="@color/category_button_background"
+                app:chipStrokeColor="#E0E0E0"
+                app:chipStrokeWidth="1dp"
+                android:text="Desserts" />
+
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+    <!-- Shimmer Layout for Loading State with improved styling -->
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerFrameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:shimmer_base_color="#F0F0F0"
+        app:shimmer_highlighted_color="#E0E0E0"
+        app:shimmer_auto_start="true"
+        app:shimmer_duration="1000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category_scroll">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Repeat this placeholder item 5 times -->
+            <include layout="@layout/item_restaurant_placeholder" />
+            <include layout="@layout/item_restaurant_placeholder" />
+            <include layout="@layout/item_restaurant_placeholder" />
+            <include layout="@layout/item_restaurant_placeholder" />
+            <include layout="@layout/item_restaurant_placeholder" />
+
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <!-- Main Content: RecyclerView with SwipeRefreshLayout -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category_scroll">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_restaurants"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:padding="8dp"
+            android:paddingBottom="80dp"
+        android:scrollbars="none"
+        tools:listitem="@layout/item_restaurant" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <!-- Enhanced Loading & Empty States -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:indeterminateTint="#FF5722"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/emptyView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No restaurants found"
+        android:textSize="18sp"
+        android:textColor="#757575"
+        android:visibility="gone"
+        android:drawableTop="@android:drawable/ic_menu_search"
+        android:drawableTint="#9E9E9E"
+        android:drawablePadding="16dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:contentDescription="Cart"
+        android:src="@drawable/ic_cart"
+        app:tint="@android:color/white"
+        app:backgroundTint="#000000"
+        app:elevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

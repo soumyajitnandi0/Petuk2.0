@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <color name="purple_200">#FFBB86FC</color>-->
+<!--    <color name="purple_500">#FF6200EE</color>-->
+<!--    <color name="purple_700">#FF3700B3</color>-->
+<!--    <color name="teal_200">#FF03DAC5</color>-->
+<!--    <color name="teal_700">#FF018786</color>-->
+<!--    <color name="black">#FF000000</color>-->
+<!--    <color name="white">#FFFFFFFF</color>-->
+<!--        <color name="background_light">#FFFFFF</color>-->
+    <!-- Color Palette -->
+<!--    <color name="primary">#FF6B6B</color>-->
+<!--    <color name="primary_dark">#FF4F4F</color>-->
+<!--    <color name="accent">#4ECDC4</color>-->
+    <color name="colorPrimary">#FF4081</color>
+    <color name="colorPrimaryDark">#C60055</color>
+    <color name="colorAccent">#FF8A65</color>
+    <color name="colorDisabled">#BDBDBD</color>
+
+    <!-- Category Button Colors -->
+    <color name="category_button_text_selected">#FFFFFF</color>
+    <color name="category_button_text_normal">#333333</color>
+    <color name="category_button_background_selected">#FF6B6B</color>
+    <color name="category_button_background_normal">#F5F5F5</color>
+    <color name="category_button_stroke">#E0E0E0</color>
+
+    <!-- Selector for Category Button Text -->
+    <color name="category_button_text">@color/category_button_text_normal</color>
+
+    <!-- Selector for Category Button Background -->
+    <color name="category_button_background">@color/category_button_background_normal</color>
+
+        <!-- Base colors - keeping names but updating values to orange theme -->
+        <color name="purple_200">#FFAB91</color>  <!-- Light Orange -->
+        <color name="purple_500">#FF5722</color>  <!-- Primary Orange -->
+        <color name="purple_700">#E64A19</color>  <!-- Dark Orange -->
+        <color name="teal_200">#FF9800</color>  <!-- Secondary Orange -->
+        <color name="teal_700">#F57C00</color>  <!-- Dark Secondary Orange -->
+        <color name="black">#FF000000</color>  <!-- Pure Black -->
+        <color name="white">#FFFFFFFF</color>  <!-- Pure White -->
+
+        <!-- Order status colors - themed to orange/black/white with improved contrast -->
+        <color name="status_color_new">#FF5722</color>  <!-- Orange -->
+        <color name="status_color_preparing">#FF9800</color>  <!-- Light Orange -->
+        <color name="status_color_ready">#FF7043</color>  <!-- Deep Orange -->
+        <color name="status_color_delivered">#212121</color>  <!-- Dark Gray (near black) -->
+        <color name="status_color_rejected">#D32F2F</color>  <!-- Dark Red -->
+
+        <!-- Generic colors - themed with improved shades -->
+        <color name="new_order_color">#FF5722</color>  <!-- Orange -->
+        <color name="prepared_order_color">#FF9800</color>  <!-- Light Orange -->
+        <color name="completed_order_color">#212121</color>  <!-- Dark Gray (near black) -->
+        <color name="default_text_color">#212121</color>  <!-- Near Black -->
+        <color name="highlight_color">#FFECB3</color>  <!-- Very Light Orange - improved for contrast -->
+
+        <!-- Button colors - themed with better contrast -->
+        <color name="button_accept">#FF5722</color>  <!-- Orange -->
+        <color name="button_reject">#212121</color>  <!-- Near Black -->
+        <color name="button_prepared">#FF9800</color>  <!-- Light Orange -->
+        <color name="button_delivered">#FF7043</color>  <!-- Deep Orange -->
+        <color name="button_neutral">#757575</color>  <!-- Medium Gray -->
+
+        <color name="status_completed">#FF7043</color>  <!-- Deep Orange -->
+        <color name="status_preparing">#FF9800</color>  <!-- Light Orange -->
+        <color name="status_delivering">#FF5722</color>  <!-- Orange -->
+        <color name="status_cancelled">#212121</color>  <!-- Near Black -->
+        <color name="status_default">#757575</color>  <!-- Medium Gray -->
+
+        <!-- Chart Colors - themed -->
+        <color name="chart_color_1">#FF5722</color>  <!-- Orange -->
+        <color name="chart_color_2">#FF9800</color>  <!-- Light Orange -->
+        <color name="chart_color_3">#FFE0B2</color>  <!-- Very Light Orange -->
+        <color name="chart_color_4">#212121</color>  <!-- Near Black -->
+        <color name="chart_color_5">#757575</color>  <!-- Medium Gray -->
+        <color name="chart_color_6">#FFCCBC</color>  <!-- Light Orange -->
+        <color name="chart_color_7">#FFFFFF</color>  <!-- White -->
+        <color name="chart_color_8">#E64A19</color>  <!-- Dark Orange -->
+
+        <!-- Theme colors - with improved shades for better contrast -->
+        <color name="primary">#FF5722</color>  <!-- Deep Orange -->
+        <color name="primary_dark">#E64A19</color>  <!-- Darker Orange -->
+        <color name="primary_light">#FFCCBC</color>  <!-- Light Orange -->
+        <color name="accent">#FF9800</color>  <!-- Orange Accent -->
+
+        <color name="secondaryColor">#212121</color>  <!-- Almost Black -->
+        <color name="secondaryColorDark">#000000</color>  <!-- Pure Black -->
+        <color name="secondaryColorLight">#484848</color>  <!-- Dark Gray -->
+
+        <color name="textPrimary">#212121</color>  <!-- Dark Text -->
+        <color name="textSecondary">#757575</color>  <!-- Medium Text -->
+        <color name="textLight">#FFFFFF</color>  <!-- White Text -->
+        <color name="textHint">#9E9E9E</color>  <!-- Light Gray Text -->
+
+        <color name="backgroundColor">#FFFFFF</color>  <!-- White Background -->
+        <color name="surfaceColor">#F5F5F5</color>  <!-- Light Gray Surface -->
+        <color name="dividerColor">#EEEEEE</color>  <!-- Very Light Gray Divider -->
+
+        <color name="success_color">#FF9800</color>  <!-- Orange (success) -->
+        <color name="error_color">#D32F2F</color>  <!-- Red (error) - improved for visibility -->
+        <color name="warningColor">#FF7043</color>  <!-- Deep Orange (warning) -->
+
+        <!-- Additional colors for our improved UI -->
+        <color name="background_light">#FAFAFA</color>
+
+        <color name="price_green">#2E7D32</color>
+        <color name="price_background">#E8F5E9</color>
+        <color name="chip_background">#F5F5F5</color>  <!-- Lighter background for better contrast -->
+        <color name="chip_background_selected">#FFE0B2</color>  <!-- Light orange for selected chips -->
+        <color name="divider">#E0E0E0</color>
+        <color name="edit_button">#1565C0</color>
+        <color name="delete_button">#B71C1C</color>
+
+        <!-- Status colors with transparency -->
+        <color name="status_background_new">#26FF5722</color> <!-- 15% opacity Orange -->
+        <color name="status_background_processing">#26FF9800</color> <!-- 15% opacity Light Orange -->
+        <color name="status_background_completed">#26212121</color> <!-- 15% opacity Near Black -->
+
+        <!-- Rating badge colors -->
+        <color name="rating_excellent">#388E3C</color> <!-- Green -->
+        <color name="rating_good">#FF9800</color> <!-- Orange -->
+        <color name="rating_average">#FB8C00</color> <!-- Dark Orange -->
+        <color name="rating_below_average">#F4511E</color> <!-- Deep Orange -->
+    <color name="gold">#D2A400</color>
+        <color name="rating_poor">#D32F2F</color> <!-- Red -->
+
+        <!-- Color state selectors for chips -->
+        <color name="ripple_color">#33FF5722</color> <!-- 20% opacity Orange -->
+        <color name="chip_text_selected">@color/primary</color>
+        <color name="chip_text_normal">@color/textSecondary</color>
+
+
+        <!-- Text Colors -->
+        <color name="text_hint">#9E9E9E</color>
+
+        <!-- Background Colors -->
+        <color name="background">#F9F9F9</color>
+        <!--        <color name="card_background">#FFFFFF</color>-->
+        <color name="shimmer_base">#F0F0F0</color>
+        <color name="shimmer_highlighted_color">#E0E0E0</color>
+
+        <!-- Standard Colors -->
+        <color name="green">#4CAF50</color>
+        <color name="red">#F44336</color>
+        <color name="yellow">#FFC107</color>
+        <color name="grey_light">#EEEEEE</color>
+        <color name="grey">#9E9E9E</color>
+        <color name="grey_dark">#616161</color>
+
+
+        <!-- Delivery Status Colors -->
+        <color name="delivery_free">#4CAF50</color>
+        <color name="delivery_low">#8BC34A</color>
+        <color name="delivery_medium">#FF9800</color>
+        <color name="delivery_high">#F44336</color>
+
+
+
+    <color name="chip_background_color_selected">#FF5722</color>
+    <color name="chip_text_color_selected">#FFFFFF</color>
+    <color name="chip_background_color_normal">#F5F5F5</color>
+    <color name="chip_text_color_normal">#212121</color>
+
+    <!-- Other potentially missing colors -->
+    <color name="category_button_selected">#FF5722</color>
+    <color name="category_button_normal">#F5F5F5</color>
+    <color name="badge_background_color">#FF5722</color>
+    <color name="badge_text_color">#FFFFFF</color>
+    <color name="rating_background_color">#FFECB3</color>
+    <color name="status_badge_color">#FF5722</color>
+
+
+
+
+
+
+
+
+
+
+    <color name="background_color">#F8F9FA</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="transaction_card_background">#FFFFFF</color>
+    <color name="primary_color">#3F51B5</color>
+    <color name="accent_color">#FF4081</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="cashback_green">#4CAF50</color>
+    <color name="redemption_red">#F44336</color>
+    <color name="circle_bg_green">#E8F5E9</color>
+    <color name="circle_bg_red">#FFEBEE</color>
+    </resources>

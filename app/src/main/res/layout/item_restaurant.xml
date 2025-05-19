@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_restaurant"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="4dp"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Restaurant Image with Enhanced Overlay Gradient -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_restaurant"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.TopRounded"
+            tools:src="@drawable/logo_res" />
+
+        <!-- Enhanced Image Overlay for better text visibility -->
+        <View
+            android:id="@+id/image_overlay"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/restaurant_image_gradient"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_restaurant"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Restaurant Name directly on the image with the overlay -->
+        <TextView
+            android:id="@+id/tv_restaurant_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:shadowColor="#80000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_restaurant"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Restaurant Name" />
+
+        <!-- Restaurant Status Badge (New, Popular, etc) with Improved Design -->
+        <TextView
+            android:id="@+id/tv_restaurant_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/status_badge_background"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:text="Popular"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:elevation="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Favorite Button with Better Positioning -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:backgroundTint="#FFFFFF"
+            app:elevation="8dp"
+            app:fabSize="mini"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/btn_star_big_off"
+            app:tint="#FF9800" />
+
+        <!-- Restaurant Info Section with Improved Layout -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_restaurant">
+
+            <!-- Cuisine with Icon -->
+            <ImageView
+                android:id="@+id/ic_cuisine"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@android:drawable/ic_menu_sort_by_size"
+                app:tint="#757575"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/tv_cuisine"/>
+
+            <TextView
+                android:id="@+id/tv_cuisine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="#757575"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ic_cuisine"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Indian, Chinese" />
+
+            <!-- Horizontal Divider -->
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="12dp"
+                android:background="#F0F0F0"
+                app:layout_constraintTop_toBottomOf="@id/tv_cuisine" />
+
+            <!-- Restaurant Key Info with Improved Layout -->
+            <LinearLayout
+                android:id="@+id/ll_key_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/divider">
+
+                <!-- Rating Component with Improved Design -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@android:drawable/btn_star"
+                        app:tint="#FFC107" />
+
+                    <TextView
+                        android:id="@+id/tv_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:textColor="#212121"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:text="4.5" />
+                </LinearLayout>
+
+                <!-- Delivery Time Component with Improved Design -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ic_time"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@android:drawable/ic_menu_recent_history"
+                        app:tint="#757575" />
+
+                    <TextView
+                        android:id="@+id/tv_delivery_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:textColor="#757575"
+                        android:textSize="14sp"
+                        tools:text="25-35 min" />
+                </LinearLayout>
+
+                <!-- Delivery Fee Component with Improved Design -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ic_delivery"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@android:drawable/ic_dialog_map"
+                        app:tint="#F44336" />
+
+                    <TextView
+                        android:id="@+id/tv_delivery_fee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:textColor="#F44336"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:text="$2.99" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Order Now Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_order_now"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingVertical="10dp"
+                android:text="Order Now"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:cornerRadius="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_key_info" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

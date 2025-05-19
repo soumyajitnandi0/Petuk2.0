@@ -1,0 +1,26 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Gray Plate -->
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM12,20c-4.41,0 -8,-3.59 -8,-8s3.59,-8 8,-8 8,3.59 8,8 -3.59,8 -8,8z" />
+
+    <!-- Fork -->
+    <path
+        android:fillColor="#9E9E9E"
+        android:pathData="M8.5,7c0.83,0 1.5,0.67 1.5,1.5S9.33,10 8.5,10 7,9.33 7,8.5 7.67,7 8.5,7zM8,11h1v6H8v-6z" />
+
+    <!-- Spoon -->
+    <path
+        android:fillColor="#9E9E9E"
+        android:pathData="M15.5,7c-0.83,0 -1.5,0.67 -1.5,1.5S14.67,10 15.5,10s1.5,-0.67 1.5,-1.5S16.33,7 15.5,7zM15,11h1v6h-1v-6z" />
+
+    <!-- Text Placeholder -->
+    <path
+        android:fillColor="#E0E0E0"
+        android:pathData="M7,17h10v1H7z" />
+</vector>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Background circle -->
+    <path
+        android:fillColor="#FFF3E0"
+        android:pathData="M12,2A10,10 0 1,0 22,12A10,10 0 0,0 12,2Z" />
+
+    <!-- Plate -->
+    <path
+        android:fillColor="#FFCC80"
+        android:pathData="M12,6a6,6 0 1,0 6,6A6,6 0 0,0 12,6zM12,16a4,4 0 1,1 4,-4A4,4 0 0,1 12,16z" />
+
+    <!-- Fork -->
+    <path
+        android:fillColor="#5D4037"
+        android:pathData="M7,5.5v4c0,0.28 0.22,0.5 0.5,0.5S8,9.78 8,9.5v-4C8,5.22 7.78,5 7.5,5S7,5.22 7,5.5z
+                          M8.5,5.5v4c0,0.28 0.22,0.5 0.5,0.5S9.5,9.78 9.5,9.5v-4C9.5,5.22 9.28,5 9,5s-0.5,0.22 -0.5,0.5z
+                          M8,10h1v6h-1z" />
+
+    <!-- Spoon -->
+    <path
+        android:fillColor="#5D4037"
+        android:pathData="M15,5.5a1.5,1.5 0 1,0 3,0c0,-0.83 -0.67,-1.5 -1.5,-1.5S15,4.67 15,5.5z
+                          M16,7v9c0,0.28 0.22,0.5 0.5,0.5S17,16.28 17,16V7h-1z" />
+
+</vector>

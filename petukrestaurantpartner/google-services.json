@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "163763211103",
+    "project_id": "petuk-8974f",
+    "storage_bucket": "petuk-8974f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163763211103:android:802d15ba667c3c823e44ea",
+        "android_client_info": {
+          "package_name": "com.example.petukrestaurantpartner"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiWPc1c9y_1oh1dcVmHFxG6CoQ9hX7vK0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

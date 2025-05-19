@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Restaurant Image Placeholder with rounded corners -->
+        <View
+            android:id="@+id/placeholder_image"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:background="#EEEEEE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Card for info placeholder with elevation -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="-24dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/placeholder_image">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+                <!-- Restaurant Name Placeholder with animation effects -->
+                <View
+                    android:id="@+id/placeholder_name"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="100dp"
+                    android:background="#EEEEEE"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- Restaurant Cuisine Placeholder with animation effects -->
+                <View
+                    android:id="@+id/placeholder_cuisine"
+                    android:layout_width="0dp"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="150dp"
+                    android:background="#EEEEEE"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/placeholder_name" />
+
+                <!-- Bottom info placeholders with better spacing -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/placeholder_cuisine">
+
+                    <!-- Rating Placeholder -->
+                    <View
+                        android:id="@+id/placeholder_rating"
+                        android:layout_width="48dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="#EEEEEE" />
+
+                    <!-- Delivery Time Placeholder -->
+                    <View
+                        android:id="@+id/placeholder_delivery_time"
+                        android:layout_width="80dp"
+                        android:layout_height="16dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="#EEEEEE" />
+
+                    <!-- Delivery Fee Placeholder -->
+                    <View
+                        android:id="@+id/placeholder_delivery_fee"
+                        android:layout_width="0dp"
+                        android:layout_height="16dp"
+                        android:layout_weight="1"
+                        android:background="#EEEEEE" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

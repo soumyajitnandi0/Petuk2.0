@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base colors - keeping names but updating values to orange theme -->
+    <color name="purple_200">#FFAB91</color>  <!-- Light Orange -->
+    <color name="purple_500">#FF5722</color>  <!-- Primary Orange -->
+    <color name="purple_700">#E64A19</color>  <!-- Dark Orange -->
+    <color name="teal_200">#FF9800</color>  <!-- Secondary Orange -->
+    <color name="teal_700">#F57C00</color>  <!-- Dark Secondary Orange -->
+    <color name="black">#FF000000</color>  <!-- Pure Black -->
+    <color name="white">#FFFFFFFF</color>  <!-- Pure White -->
+
+    <!-- Order status colors - themed to orange/black/white -->
+    <color name="status_color_new">#FF5722</color>  <!-- Orange -->
+    <color name="status_color_preparing">#FF9800</color>  <!-- Light Orange -->
+    <color name="status_color_ready">#FF7043</color>  <!-- Deep Orange -->
+    <color name="status_color_delivered">#212121</color>  <!-- Dark Gray (near black) -->
+    <color name="status_color_rejected">#D32F2F</color>  <!-- Dark Red -->
+
+    <!-- Generic colors - themed -->
+    <color name="new_order_color">#FF5722</color>  <!-- Orange -->
+    <color name="prepared_order_color">#FF9800</color>  <!-- Light Orange -->
+    <color name="completed_order_color">#212121</color>  <!-- Dark Gray (near black) -->
+    <color name="default_text_color">#212121</color>  <!-- Near Black -->
+    <color name="highlight_color">#FFCCBC</color>  <!-- Very Light Orange -->
+
+    <!-- Button colors - themed -->
+    <color name="button_accept">#FF5722</color>  <!-- Orange -->
+    <color name="button_reject">#212121</color>  <!-- Near Black -->
+    <color name="button_prepared">#FF9800</color>  <!-- Light Orange -->
+    <color name="button_delivered">#FF7043</color>  <!-- Deep Orange -->
+    <color name="button_neutral">#757575</color>  <!-- Medium Gray -->
+
+    <color name="status_completed">#FF7043</color>  <!-- Deep Orange -->
+    <color name="status_preparing">#FF9800</color>  <!-- Light Orange -->
+    <color name="status_delivering">#FF5722</color>  <!-- Orange -->
+    <color name="status_cancelled">#212121</color>  <!-- Near Black -->
+    <color name="status_default">#757575</color>  <!-- Medium Gray -->
+
+    <!-- Chart Colors - themed -->
+    <color name="chart_color_1">#FF5722</color>  <!-- Orange -->
+    <color name="chart_color_2">#FF9800</color>  <!-- Light Orange -->
+    <color name="chart_color_3">#FFE0B2</color>  <!-- Very Light Orange -->
+    <color name="chart_color_4">#212121</color>  <!-- Near Black -->
+    <color name="chart_color_5">#757575</color>  <!-- Medium Gray -->
+    <color name="chart_color_6">#FFCCBC</color>  <!-- Light Orange -->
+    <color name="chart_color_7">#FFFFFF</color>  <!-- White -->
+    <color name="chart_color_8">#E64A19</color>  <!-- Dark Orange -->
+
+    <!-- Theme colors -->
+    <color name="primary">#FF5722</color>  <!-- Deep Orange -->
+    <color name="primary_dark">#E64A19</color>  <!-- Darker Orange -->
+    <color name="primary_light">#FFCCBC</color>  <!-- Light Orange -->
+    <color name="accent">#FF9800</color>  <!-- Orange Accent -->
+
+    <color name="secondaryColor">#212121</color>  <!-- Almost Black -->
+    <color name="secondaryColorDark">#000000</color>  <!-- Pure Black -->
+    <color name="secondaryColorLight">#484848</color>  <!-- Dark Gray -->
+
+    <color name="textPrimary">#212121</color>  <!-- Dark Text -->
+    <color name="textSecondary">#757575</color>  <!-- Medium Text -->
+    <color name="textLight">#FFFFFF</color>  <!-- White Text -->
+
+    <color name="backgroundColor">#FFFFFF</color>  <!-- White Background -->
+    <color name="surfaceColor">#F5F5F5</color>  <!-- Light Gray Surface -->
+    <color name="dividerColor">#EEEEEE</color>  <!-- Very Light Gray Divider -->
+
+    <color name="success_color">#FF9800</color>  <!-- Orange (success) -->
+    <color name="error_color">#212121</color>  <!-- Black (error) -->
+    <color name="warningColor">#FF7043</color>  <!-- Deep Orange (warning) -->
+
+
+        <!-- Additional colors for our improved UI -->
+        <color name="background_light">#FAFAFA</color>
+        <color name="card_background">#FFFFFF</color>
+        <color name="text_primary">#212121</color>
+        <color name="text_secondary">#757575</color>
+        <color name="price_green">#2E7D32</color>
+        <color name="price_background">#E8F5E9</color>
+        <color name="chip_background">#E8EAF6</color>
+        <color name="divider">#E0E0E0</color>
+        <color name="edit_button">#1565C0</color>
+        <color name="delete_button">#B71C1C</color>
+</resources>

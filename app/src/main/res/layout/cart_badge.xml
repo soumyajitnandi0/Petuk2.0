@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:padding="4dp">
+
+    <!-- Updated cart icon with modern styling -->
+    <ImageView
+        android:id="@+id/cart_icon"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_cart"
+        android:contentDescription="Shopping Cart"
+        app:tint="@color/white" />
+
+    <!-- Enhanced badge with drop shadow and smooth corners -->
+    <TextView
+        android:id="@+id/cart_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:background="@drawable/badge_background"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:elevation="6dp"
+        android:translationZ="1dp"
+        android:importantForAccessibility="no"
+        tools:text="3" />
+
+</FrameLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/splashScreenContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:importantForAccessibility="no"
+    tools:context=".ui.SplashScreenActivity">
+
+
+    <!-- Content Container for better grouping -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contentContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45"
+        app:layout_constraintWidth_percent="0.85">
+
+        <!-- Optimized Animation View -->
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/logoAnimation"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintWidth_percent="0.7"
+            app:lottie_rawRes="@raw/food_animation"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false"
+            android:contentDescription="India's #1 Food Delivery App"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <!-- App Name with improved typography -->
+        <TextView
+            android:id="@+id/tvAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:letterSpacing="0.05"
+            android:textColor="@color/white"
+            android:shadowColor="#80000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:layout_marginTop="16dp"
+            android:importantForAccessibility="no"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logoAnimation"/>
+
+        <!-- Improved Tagline -->
+        <TextView
+            android:id="@+id/tvTagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="India's #1 Food Delivery App"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:importantForAccessibility="no"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAppName"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Loading Indicator with MaterialComponents -->
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/loadingIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:indicatorColor="@color/white"
+        app:trackColor="@color/primary_light"
+        app:indicatorSize="48dp"
+        app:trackThickness="4dp"
+        android:layout_marginTop="48dp"
+        android:contentDescription=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contentContainer"/>
+
+    <!-- Version Info (New) -->
+    <TextView
+        android:id="@+id/tvVersionInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:alpha="0.7"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Version 1.0"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:paddingBottom="30dp"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Restaurant header card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewRestaurantHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/header_gradient_bg"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/imageViewRestaurantPhoto"
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:background="@drawable/circular_image_bg"
+                    android:contentDescription="Restaurant Logo"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_restaurant_logo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/textLight" />
+
+                <TextView
+                    android:id="@+id/textViewRestaurantName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Restaurant Name"
+                    android:textColor="@color/textLight"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewRestaurantPhoto"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewRestaurantPhoto" />
+
+                <TextView
+                    android:id="@+id/textViewRestaurantCuisine"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="sans-serif"
+                    android:text="North Indian"
+                    android:textColor="@color/primary_light"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textViewRestaurantName"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewRestaurantName" />
+
+                <TextView
+                    android:id="@+id/textViewRestaurantEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="sans-serif"
+                    android:text="restaurant@example.com"
+                    android:textColor="@color/textLight"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textViewRestaurantCuisine"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewRestaurantCuisine" />
+
+                <TextView
+                    android:id="@+id/textViewRestaurantPhone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="sans-serif"
+                    android:text="+1 234 567 8900"
+                    android:textColor="@color/textLight"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textViewRestaurantEmail"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewRestaurantEmail" />
+
+                <TextView
+                    android:id="@+id/textViewDeliveryTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Avg. Delivery: 30 mins"
+                    android:textColor="@color/textLight"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textViewRestaurantPhone"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewRestaurantPhone" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchRestaurantStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Restaurant Open"
+                    android:textColor="@color/textLight"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewDeliveryTime"
+                    app:thumbTint="@color/switch_thumb_selector"
+                    app:trackTint="@color/switch_track_selector" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Address card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardViewRestaurantHeader">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/imageLocation"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_location"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/primary" />
+
+                <TextView
+                    android:id="@+id/textViewAddressTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Restaurant Address"
+                    android:textColor="@color/primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageLocation"
+                    app:layout_constraintStart_toEndOf="@+id/imageLocation"
+                    app:layout_constraintTop_toTopOf="@+id/imageLocation" />
+
+                <TextView
+                    android:id="@+id/textViewAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif"
+                    android:text="123 Main Street, City, Country"
+                    android:textColor="@color/textPrimary"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewAddressTitle" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Restaurant Options -->
+        <TextView
+            android:id="@+id/textViewOptionsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Restaurant Management"
+            android:textColor="@color/secondaryColor"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardViewAddress" />
+
+        <!-- Option Buttons -->
+        <LinearLayout
+            android:id="@+id/layoutOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/textViewOptionsTitle">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonEditProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/surfaceColor"
+                android:fontFamily="sans-serif-medium"
+                android:paddingVertical="12dp"
+                android:text="Edit Restaurant Profile"
+                android:textColor="@color/secondaryColor"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/ic_edit"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                app:iconTint="@color/primary"
+                app:strokeColor="@color/dividerColor"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonManageMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/surfaceColor"
+                android:fontFamily="sans-serif-medium"
+                android:paddingVertical="12dp"
+                android:text="Manage Menu"
+                android:textColor="@color/secondaryColor"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/ic_menu"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                app:iconTint="@color/primary"
+                app:strokeColor="@color/dividerColor"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonOperatingHours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/surfaceColor"
+                android:fontFamily="sans-serif-medium"
+                android:paddingVertical="12dp"
+                android:text="Set Operating Hours"
+                android:textColor="@color/secondaryColor"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/ic_time"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                app:iconTint="@color/primary"
+                app:strokeColor="@color/dividerColor"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonPaymentSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/surfaceColor"
+                android:fontFamily="sans-serif-medium"
+                android:paddingVertical="12dp"
+                android:text="Payment Settings"
+                android:textColor="@color/secondaryColor"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/ic_payment"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                app:iconTint="@color/primary"
+                app:strokeColor="@color/dividerColor"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonAnalytics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/surfaceColor"
+                android:fontFamily="sans-serif-medium"
+                android:paddingVertical="12dp"
+                android:text="View Analytics"
+                android:textColor="@color/secondaryColor"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/ic_analytics"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                app:iconTint="@color/primary"
+                app:strokeColor="@color/dividerColor"
+                app:strokeWidth="1dp" />
+        </LinearLayout>
+
+        <!-- Account Settings -->
+        <TextView
+            android:id="@+id/textViewAccountTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Account Settings"
+            android:textColor="@color/secondaryColor"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutOptions" />
+
+        <LinearLayout
+            android:id="@+id/layoutAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/textViewAccountTitle">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonChangePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/surfaceColor"
+                android:fontFamily="sans-serif-medium"
+                android:paddingVertical="12dp"
+                android:text="Change Password"
+                android:textColor="@color/secondaryColor"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/ic_lock"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                app:iconTint="@color/primary"
+                app:strokeColor="@color/dividerColor"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:backgroundTint="@color/primary"
+                android:fontFamily="sans-serif-medium"
+                android:paddingVertical="12dp"
+                android:text="Logout"
+                android:textColor="@color/textLight"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/ic_logout"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                app:iconTint="@color/textLight" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBarProfile"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:indeterminateTint="@color/primary"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
